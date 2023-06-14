@@ -5,7 +5,7 @@ published: false
 ---
 Recently I have worked on a Graph View feature in our app, which consisted of visualizing links and hierarchies of user Pages. I have used the [Force Graph](https://github.com/vasturiano/force-graph) library which appealed to me by its simplicity and great capabilities.
 
-This tutorial covers the integration of the Force Graph library with the Nuxt framework for data visualization. You will learn how to create an interactive graph visualization, fitting for many use cases (1,2,3,4).
+This tutorial covers the integration of the Force Graph library with the Nuxt framework for data visualization. You will learn how to create an interactive graph visualization, fitting for many use cases ([1](https://help.obsidian.md/Plugins/Graph+view),[2](https://cytoscape.org/what_is_cytoscape.html),[3](https://arxiv.org/pdf/2106.12839.pdf)).
 
 # Installing Nuxt and setting up the project
 
@@ -267,7 +267,7 @@ getNodes() {
       return DATA.map(d => ({
         id: d.title,
         name: d.title,
-        val: Math.sqrt(d.text.length),
+        val: Math.cbrt(d.text.length),
         links: this.getLinksForNode(d),
         color: this.defaultNodeColor
       }))
@@ -321,24 +321,23 @@ drawGraph() {
     this.graph(this.$refs.graph)
         .graphData({nodes: this.getNodes, links: this.getLinks})
         .nodeCanvasObject((node, ctx, globalScale) => {
-            const fontSize = 12 / globalScale;
-            ctx.font = `${fontSize}px Sans-Serif`;
+            ctx.font = `12px Sans-Serif`;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             ctx.fillStyle = node.color;
             ctx.beginPath();
-            ctx.arc(node.x, node.y, Math.cbrt(node.val) * 3, 0, 2 * Math.PI, false);
+            ctx.arc(node.x, node.y, node.val, 0, 2 * Math.PI, false);
             ctx.fill();
             ctx.fillText(
                 node.name,
                 node.x,
-                node.y + Math.cbrt(node.val) * 3 + 3,
+                node.y + node.val + 3,
             );
         })
 }
 ```
 
-What this does, is in every render step, it iterates over all the nodes, draws them as an `arc` with a diameter of `Math.cbrt(node.val) * 3` (as recommended by the author of the library) and coordinates of `node.x, node.y`. After the node is drawn, the text is also drawn using the `fillText` method.
+What this does, is in every render step, it iterates over all the nodes, draws them as an `arc` with a diameter of `node.val`, and coordinates of `node.x, node.y`. After the node is drawn, the text is also drawn using the `fillText` method.
 
 # Closing Thoughts
 That is all from me for today. Thank you for reading. I plan on publishing a follow-up blog about some challenges we had to deal with when using a similar solution in a production app. I will link the blog here, so be sure to check back soon.
