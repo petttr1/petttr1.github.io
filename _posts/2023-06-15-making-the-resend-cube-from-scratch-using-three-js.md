@@ -3,17 +3,18 @@ layout: post
 title: Making the Resend cube from scratch using Three.js
 published: true
 ---
-<img alt="the resulting cube" src="../images/cube.gif" width="1228"/>
+<iframe src="../public/resend_cube.html" height="400px" width="100%" style="border:none;"></iframe>
+<figcaption align = "center">The final result (code at the end of this post)</figcaption>
 
-4 months ago - on 30th January, I have seen the https://resend.com webpage with the amazing looking 3D cube. My brain immediately kicked into gear trying to figure out how they did it.
+4 months ago - on 30th January, I have seen the [https://resend.com](https://resend.com) webpage with the amazing looking 3D cube. My brain immediately kicked into gear trying to figure out how they did it.
 
-4 month later, their recent launch reminded me of this desire of mine to steal it (Steal like an artist reference, thank you). As I have some experience with three js, I went right in.
+4 months later, their recent launch reminded me of this desire of mine to steal it (Steal like an artist reference, yay!). As I have some experience with Three.js, I went right in.
 
 # Start with a boilerplate
 
-This sets you up with the most basic scene - a single white cube, black background, and standard material on the cube, meaning you should see the shadows and stuff. Pretty neat. You're welcome. (I have actually stolen this and adapted it a bit from https://www.3dcodekits.com/simple-boilerplate-code-for-three-js-in-a-single-html-file/ ; thanks 3dcodekits, I love you!).
+This sets you up with the most basic scene - a single white cube, black background, and standard material on the cube, meaning you should see the shadows and stuff. Pretty neat. You're welcome. (I have actually stolen this and adapted it a bit from [3dcodekits](https://www.3dcodekits.com/simple-boilerplate-code-for-three-js-in-a-single-html-file/); thanks 3dcodekits, I love you!).
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,9 +68,9 @@ This sets you up with the most basic scene - a single white cube, black backgrou
 
 # Let's make the cube a bit less cuber (more round)
 
-Turns out, three js does not have a direct solution to this. So a quick google search yielded this neat little function (https://discourse.threejs.org/t/round-edged-box/1402)
+Turns out, three js does not have a direct solution to this. So a quick google search yielded this neat little function ([source](https://discourse.threejs.org/t/round-edged-box/1402))
 
-```
+```javascript
 function createBoxWithRoundedEdges( width, height, depth, radius0, smoothness ) {
     let shape = new THREE.Shape();
     let eps = 0.00001;
@@ -96,13 +97,15 @@ function createBoxWithRoundedEdges( width, height, depth, radius0, smoothness ) 
 
 Calling the function produces a neat little cube with rounded corners. you can tweak how much you would like to have the corners rounded with the 4th parameter - radius0. (don't forget to adjust smoothness as you make the radius larger. You'll see why once you do it)
 
+```javascript
 const geometry = createBoxWithRoundedEdges( 1, 1, 1, .06, 20 ); //the smoother the better
+```
 
 # Material + Lights
 
 Now we want the cube to feel like the resend one - meaning we need to make it metal and a different light. Metal is easy - we already use standard material, so we just add some metalness and tone down roughness (while we are at it, we change the color to dark grey).
 
-```
+```javascript
 const material = new THREE.MeshStandardMaterial({ color: 0x2a2a2a, metalness: 1, roughness: 0.11 });
 ```
 
@@ -112,7 +115,7 @@ Compared to directional light, which gets emitted in a specific direction (but i
 
 We can also add a second light for the undertones. Placing it below the cube ensures that we always have some part highlighted.
 
-```
+```javascript
 // Create the light
 const light = new THREE.PointLight( 0xffffff, 100, 500 );
 light.position.set( 0, 10, 10 );
@@ -123,11 +126,13 @@ light2.position.set( 0, -10, -5 );
 scene.add( light2 );
 ```
 
-Making baby cubes
+You can play with the material properties and lights (intensities, colors) to create some cool effects.
+
+# Making baby cubes
 
 Here comes the fun part. We will create another function which will call the rounded edges cube function in some nested loops and make 27 cubes. Let's go.
 
-```
+```javascript
 function makeCubes() {
     const material = new THREE.MeshStandardMaterial({ color: 0x1a1a1a, metalness: 1, roughness: 0.18 });
     const numCubes = 3;
@@ -151,7 +156,7 @@ function makeCubes() {
 
 All we need to do now is call it:
 
-```
+```javascript
 // Create a cube
 const cube = makeCubes();
 scene.add(cube);
@@ -163,19 +168,19 @@ As a bonus we can add controls and rotate the cube as we like. If you want to di
 
 First we need to import addons script. Place this line below the three import script.
 
-```
+```html
 <script src="https://cdn.jsdelivr.net/npm/three-addons@1.2.0/build/three-addons.min.js"></script>
 ```
 
 Then we add the controls - you can add it anywhere, for example near the camera = ... line.
 
-```
+```javascript
 const controls = new THREE_ADDONS.OrbitControls(camera,renderer.domElement);
 ```
 
 And finally we edit the animate function which gets called every time something is rendering.
 
-```
+```javascript
 // Animate the cube
 function animate() {
     requestAnimationFrame(animate);
@@ -188,7 +193,7 @@ function animate() {
 
 Why does the resend cube look better?
 
-1. BLOOM - the glow effect you see coming off the cube is called bloom. In three js it is overly complicated to add (https://codepen.io/prisoner849/pen/LYLrawm , https://threejs.org/examples/webgl_postprocessing_unreal_bloom ), and I was just too lazy. I have actually implemented it once in another project which I will perhaps share some other time.
+1. BLOOM - the glow effect you see coming off the cube is called bloom. In three js it is overly complicated to add ([example_1](https://codepen.io/prisoner849/pen/LYLrawm) , [example_2](https://threejs.org/examples/webgl_postprocessing_unreal_bloom) ), and I was just too lazy. I have actually implemented it once in another project which I will perhaps share some other time.
 2. The mini cubes are not the same - resend has different geometry with the "squares" that are being extruded into cubes having rounded corners as well. Might be a good exercise for both you and me to try and make some other time.
 3. The effect of rotating layer - This looks cool and in theory could be made by always rotating just 1 layer -  right before rotating, you can flip the cube by a before-defined, random transformation turning it on one of the sides. This way you can create the effect that you always rotate a different side.
 4. Better lightning - Nailing the lightning is difficult, so I approximated the best I could (I gave it 2 minutes).
@@ -197,7 +202,7 @@ I encourage you to add these features and tag me in the results - perhaps on [Tw
 
 Final code:
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
