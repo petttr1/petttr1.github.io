@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Resend Cube Lookalike Part 2: Bloom and Animation
+title: The Resend Cube Lookalike Part 2 - Bloom and Animation
 published: true
 ---
 <iframe src="../public/resend_cube_2.html" height="400px" width="100%" style="border:none;"></iframe>

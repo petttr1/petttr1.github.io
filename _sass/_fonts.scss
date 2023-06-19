@@ -1,0 +1,31 @@
+// normal
+@font-face {
+  font-family: "iosevka";
+  src: url("../public/fonts/iosevka-extended.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//bold
+@font-face {
+  font-family: "iosevka";
+  src: url("../public/fonts/iosevka-extendedbold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+// italic
+@font-face {
+  font-family: "iosevka";
+  src: url("../public/fonts/iosevka-extendeditalic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+//italic bold
+@font-face {
+  font-family: "iosevka";
+  src: url("../public/fonts/iosevka-extendedbolditalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}

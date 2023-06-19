@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: Peter Bokor
+name: Devs Love Coffee
 
 # Short bio or description (displayed in the header)
-description: I get excited and make stuff sometimes. also developer @ acreom
+description: I make stuff sometimes
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars.githubusercontent.com/u/22456373?v=4
+avatar: https://avatars.githubusercontent.com/u/22456373?s=400&u=b42776cb23e4bf70ed77f536d08fabee91c04c89&v=4
 
 future: true
 
@@ -20,15 +20,15 @@ future: true
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: petttr1@gmail.com
+  email:
   facebook:
   flickr:
-  github: petttr1
+  github:
   instagram:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: just_petko
+  twitter:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/

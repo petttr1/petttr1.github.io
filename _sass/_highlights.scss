@@ -8,10 +8,18 @@ div.highlight {
   box-shadow: 3px 3px rgba(0,0,0,0.1);
   margin: 20px 0 20px 0;
   overflow: scroll;
+  font-size: 14px;
 }
 
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+
+  &:not(.highlight &) {
+    color: #666;
+    background: #efefef;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
 }
 
 .highlight .c { color: #586E75 } /* Comment */
