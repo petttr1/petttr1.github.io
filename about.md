@@ -4,7 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Working on stuff.
+Maker, doer, future writer, developer @ [acreom](https://acreom.com)
+
+
+Making stuff I will write about in 10 years.
 
 ### Contact me
 
