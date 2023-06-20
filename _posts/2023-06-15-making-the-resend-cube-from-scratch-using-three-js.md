@@ -2,9 +2,13 @@
 layout: post
 title: Making the Resend cube from scratch using Three.js
 published: true
+image: /images/img-card-1.png
+description: Step-by-Step Replication of the Resend Cube Using Three.js and a Single HTML File. Starting with a boilerplate and adding the cube, making it the correct shape, materials and lightning.
+excerpt: An exploration and tutorial on how to make the resend cube from scratch using Three.js.
 ---
 <iframe src="../public/resend_cube.html" height="400px" width="100%" style="border:none;"></iframe>
 <figcaption align = "center">The final result (code at the end of this post)</figcaption>
+
 
 4 months ago - on 30th January, I have seen the [https://resend.com](https://resend.com) webpage with the amazing looking 3D cube. My brain immediately kicked into gear trying to figure out how they did it.
 

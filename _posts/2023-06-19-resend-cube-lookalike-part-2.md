@@ -2,6 +2,9 @@
 layout: post
 title: The Resend Cube Lookalike Part 2 - Bloom and Animation
 published: true
+image: /images/card-img-2.png
+description: A Part 2 of the Step-by-Step Replication of the Resend Cube Using Three.js and a Single HTML File. This time we optimize the Imports, add Bloom, and make the Animation much better.
+excerpt: Part 2 of making the resend cube from scratch using Three.js - some more explorations, imports optimizations, adding bloom, and animations. 
 ---
 <iframe src="../public/resend_cube_2.html" height="400px" width="100%" style="border:none;"></iframe>
 <figcaption align = "center">The final result - interactive (code at the end of this post)</figcaption>
