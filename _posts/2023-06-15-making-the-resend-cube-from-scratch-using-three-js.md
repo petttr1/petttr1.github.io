@@ -7,7 +7,7 @@ description: Step-by-Step Replication of the Resend Cube Using Three.js and a Si
 excerpt: An exploration and tutorial on how to make the resend cube from scratch using Three.js.
 ---
 <iframe src="../public/resend_cube.html" height="400px" width="100%" style="border:none;"></iframe>
-<figcaption align = "center">The final result (code at the end of this post)</figcaption>
+<figcaption align = "center">The final result. Interactive. (code at the end of the post)</figcaption>
 
 
 4 months ago - on 30th January, I have seen the [https://resend.com](https://resend.com) webpage with the amazing looking 3D cube. My brain immediately kicked into gear trying to figure out how they did it.
@@ -202,7 +202,7 @@ Why does the resend cube look better?
 3. The effect of rotating layer - This looks cool and in theory could be made by always rotating just 1 layer -  right before rotating, you can flip the cube by a before-defined, random transformation turning it on one of the sides. This way you can create the effect that you always rotate a different side.
 4. Better lightning - Nailing the lightning is difficult, so I approximated the best I could (I gave it 2 minutes).
 
-I encourage you to add these features and tag me in the results - perhaps on [Twitter](https://twitter.com/just_petko). Have fun.
+I encourage you to add these features and tag me in the results - perhaps on [Twitter](https://twitter.com/devslovecoffee). Have fun.
 
 Final code:
 
@@ -308,3 +308,6 @@ Final code:
 </body>
 </html>
 ```
+
+Part 2 where I add the Bloom and Animation is live here: [https://devslovecoffee.com/resend-cube-lookalike-part-2/](https://devslovecoffee.com/resend-cube-lookalike-part-2/).
+Part 3 where we get as close to the real thing as possible here: [https://devslovecoffee.com/resend-cube-lookalike-part-3/](https://devslovecoffee.com/resend-cube-lookalike-part-3/).

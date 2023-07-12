@@ -15,4 +15,4 @@ Currently making stuff and gathering learnings I will write about in 10 years.
 <a href="https://linkedin.com/in/peter-bokor-92a969213" target="_blank">linkedin</a>
 ### Contact
 
-[petttr1@gmail.com](mailto:petttr1@gmail.com)
+petttr1[at]gmail[dot]com
