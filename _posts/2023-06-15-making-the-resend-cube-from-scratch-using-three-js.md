@@ -6,7 +6,7 @@ image: /images/img-card-1.png
 description: Step-by-Step Replication of the Resend Cube Using Three.js and a Single HTML File. Starting with a boilerplate and adding the cube, making it the correct shape, materials and lightning.
 excerpt: An exploration and tutorial on how to make the resend cube from scratch using Three.js.
 ---
-<iframe src="../public/resend_cube.html" height="400px" width="100%" style="border:none;"></iframe>
+<iframe loading="lazy" title="The Resend cube lookalike" src="../public/resend_cube.html" height="400px" width="100%" style="border:none;"></iframe>
 <figcaption align = "center">The final result. Interactive. (code at the end of the post)</figcaption>
 
 

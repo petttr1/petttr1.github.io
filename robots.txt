@@ -1,0 +1,11 @@
+---
+layout: null
+sitemap: false
+---
+User-agent: *
+
+Disallow: /resend_cube.html
+Disallow: /resend_cube_2.html
+Disallow: /resend_cube_3.html
+
+Sitemap: {{ site.url }}/sitemap.xml

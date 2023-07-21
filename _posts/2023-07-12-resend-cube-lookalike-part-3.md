@@ -6,8 +6,8 @@ image: /images/img-card-3.png
 description: A Part 3 of the Step-by-Step Replication of the Resend Cube Using Three.js and a Single HTML File. In this post we enhance the lights, add the god rays and tie it all up.
 excerpt: Part 3 of making the resend cube from scratch using Three.js - Enhancing the Lights, add the God Rays and finishing up.
 ---
-<iframe src="../public/resend_cube_3.html" height="400px" width="100%" style="border:none;"></iframe>
-<figcaption align = "center">The final result (adjusted slightly to work on mobile as well). Interactive on desktop. (code at the end of the post)</figcaption>
+<iframe loading="lazy" title="The Resend cube lookalike" src="../public/resend_cube_3.html" height="400px" width="100%" style="border:none;"></iframe>
+<figcaption align = "center">The final result. Interactive on desktop (code at the end of the post).</figcaption>
 
 This is the final part of the Resend cube lookalike series where we are trying to recreate the Resend cube. This time we fix the lights and add the "god rays" which are a pretty neat trick as we find out. You can get caught up with parts 1 and 2 here: [part 1](https://devslovecoffee.com/making-the-resend-cube-from-scratch-using-three-js/), [part 2](https://devslovecoffee.com/resend-cube-lookalike-part-2/).
 

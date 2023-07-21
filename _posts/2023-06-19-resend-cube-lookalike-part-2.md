@@ -6,7 +6,7 @@ image: /images/card-img-2.png
 description: A Part 2 of the Step-by-Step Replication of the Resend Cube Using Three.js and a Single HTML File. This time we optimize the Imports, add Bloom, and make the Animation much better.
 excerpt: Part 2 of making the resend cube from scratch using Three.js - some more explorations, imports optimizations, adding bloom, and animations. 
 ---
-<iframe src="../public/resend_cube_2.html" height="400px" width="100%" style="border:none;"></iframe>
+<iframe loading="lazy" title="The Resend cube lookalike" src="../public/resend_cube_2.html" height="400px" width="100%" style="border:none;"></iframe>
 <figcaption align = "center">The final result. Interactive. (code at the end of the post)</figcaption>
 
 The unfinished stuff from [Making the Resend cube from scratch using Three.js](https://devslovecoffee.com/making-the-resend-cube-from-scratch-using-three-js/) bothered me, So part 2 with bloom and animation is here. This is a continuation of my previous post and builds on the code we have produced, so be sure to check it out and catch up.

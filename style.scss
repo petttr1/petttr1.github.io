@@ -70,7 +70,7 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $red;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
@@ -267,10 +267,14 @@ nav {
     margin-top: 10px;
   }
 
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
+  //.read-more {
+  //  text-transform: uppercase;
+  //  font-size: 15px;
+  //
+  //  &:hover, &:active {
+  //    color: $red;
+  //  }
+  //}
 }
 
 .wrapper-footer {

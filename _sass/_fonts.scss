@@ -1,31 +1,35 @@
 // normal
 @font-face {
   font-family: "iosevka";
-  src: url("../public/fonts/iosevka-extended.ttf");
+  src: url("../public/fonts/iosevka-extended.woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 //bold
 @font-face {
   font-family: "iosevka";
-  src: url("../public/fonts/iosevka-extendedbold.ttf");
+  src: url("../public/fonts/iosevka-extendedbold.woff2");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 // italic
 @font-face {
   font-family: "iosevka";
-  src: url("../public/fonts/iosevka-extendeditalic.ttf");
+  src: url("../public/fonts/iosevka-extendeditalic.woff2");
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 }
 
 //italic bold
 @font-face {
   font-family: "iosevka";
-  src: url("../public/fonts/iosevka-extendedbolditalic.ttf");
+  src: url("../public/fonts/iosevka-extendedbolditalic.woff2");
   font-weight: bold;
   font-style: italic;
+  font-display: swap;
 }

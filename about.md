@@ -9,6 +9,8 @@ Maker, doer, part-time thinker, future writer, developer @ [acreom](https://acre
 
 Currently making stuff and gathering learnings I will write about in 10 years.
 
+Also, I love coffee ☕.
+
 ### Socials
 <a href="https://twitter.com/just_petko" target="_blank">twitter</a>
 
