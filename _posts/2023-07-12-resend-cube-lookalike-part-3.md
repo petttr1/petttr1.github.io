@@ -328,7 +328,7 @@ composer.addPass(renderPass);
 composer.addPass(bloomPass);
 ```
 
-with a more readable adn updated function addRendering:
+with a more readable and updated function addRendering:
 
 ```javascript
 function addRendering() {
