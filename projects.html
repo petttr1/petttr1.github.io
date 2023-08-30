@@ -1,0 +1,14 @@
+---
+layout: page
+title: Projects by DLC
+permalink: /projects/
+---
+<div class="projects">
+    {% for project in site.projects %}
+    <article class="project">
+        <h1>{{ project.name }}</h1>
+        <a href="{{ project.projectUrl }}" target="_blank">{{ project.projectUrl }}</a>
+        <p>{{ project.description }}</p>
+    </article>
+    {% endfor %}
+</div>
