@@ -157,7 +157,7 @@ let calcY = (x - box.x - (box.width / 2)) / constrain;
 
 ## The end (that was fast)
 
-Thanks for reading this quick post. Now that you a re a cool kid, tweet (X?) me your best Bento grid <a href="https://x.com/devslovecoffee" target="_blank">@devslovecoffee</a>. 
+Thanks for reading this quick post. Now that you are a cool kid, tweet (X?) me your best Bento grid <a href="https://x.com/devslovecoffee" target="_blank">@devslovecoffee</a>. 
 
 Don't forget to check out my other posts and projects ☕.
 
